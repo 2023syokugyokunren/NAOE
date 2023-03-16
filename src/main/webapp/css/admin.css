@@ -1,0 +1,11 @@
+@charset "UTF-8";
+html{
+	text-align: center;
+}
+.item{
+	margin:auto
+}
+p{
+	padding: 200px  0 50px;
+	font-size: 25px;
+}

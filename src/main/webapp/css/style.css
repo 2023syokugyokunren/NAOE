@@ -1,0 +1,759 @@
+@charset "utf-8";
+/* すべてのページに適用される設定 */
+html {
+     font-size: 16px;
+     font-family: sans-serif;
+
+}
+body{
+		background-image: url(./img/image1.jpeg);
+		background-size: cover;
+	}
+
+
+
+a:link {
+    color: #F07D34;
+    text-decoration: none;
+}
+a:visited {
+    color: #F07D34;
+    text-decoration: none;
+}
+a:hover {
+    color: #F07D34;
+    text-decoration: underline;
+}
+a:active {
+    color: #F07D34;
+    text-decoration: underline;
+}
+
+/* フォームのボタンに適用 */
+
+
+
+input[type=text],input[type=password],input[type=email] {
+    padding: 10px 15px; /*ボックスを大きくする*/
+    font-size: 12px;
+    border-radius: 3px; /*ボックス角の丸み*/
+    border: 2px solid #ddd; /*枠線*/
+    box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+}
+
+input[type=submit]{
+	background: #eee;
+    border-radius: 5px;
+    position: relative;
+    margin: 0 auto;
+    max-width: 280px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+    }
+
+
+input[type=submit]:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  right: 2rem;
+  font-size: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.3s;
+  width: 6px;
+  height: 6px;
+  border-top: solid 2px currentColor;
+  border-right: solid 2px currentColor;
+  transform: translateY(-50%) rotate(45deg);
+}
+input[type=submit]:hover {
+  background: #6bb6ff;
+  color: #FFF;
+}
+input[type=submit]:hover:after {
+  right: 1.4rem;
+}
+
+/* すべてのページに適用 - ヘッダー */
+
+header {
+	text-align: left;
+	padding: 10px 10px;
+	background-color: white;
+	height:3.8rem;
+	position:sticky;
+	top:0;
+	z-index: 99;
+	border-bottom: 2px solid #5ab4bd;
+}
+.header-right {
+	cursor: pointer;
+	position: absolute;
+	right: 60px;
+	top: 15px;
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+}
+.gest {
+	cursor: pointer;
+	position: absolute;
+	right: 60px;
+	top: 10px;
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+}
+
+.gest a {
+	font-size: 16px;
+}
+
+
+/* ハンバーガー 2/28 */
+
+/* チェックボックスは非表示に */
+.drawer-hidden {
+  display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer-open {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;/* 重なり順を一番上に */
+  cursor: pointer;
+  float: right;
+  padding:0 0 20px 20px;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer-open span,
+.drawer-open span:before,
+.drawer-open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #333;
+  transition: 0.5s;
+  position: absolute;
+}
+
+/* 三本線のうち一番上の棒の位置調整 */
+.drawer-open span:before {
+  bottom: 8px;
+}
+
+/* 三本線のうち一番下の棒の位置調整 */
+.drawer-open span:after {
+  top: 8px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer-check:checked ~ .drawer-open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer-check:checked ~ .drawer-open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer-check:checked ~ .drawer-open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* メニューのデザイン*/
+.drawer-content {
+  width: 20%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: -100%;/* メニューを画面の外に飛ばす */
+  z-index: 99;
+  background: #fff;
+  transition: 0.5s;
+  padding: 20px;
+   
+}
+
+.drawer-content a,li {
+	list-style-type: none;
+	 text-align: left;
+	 font-size: 25px;
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer-check:checked ~ .drawer-content {
+  right: 0;/* メニューを画面に入れる */
+}
+
+
+/* スライドショー */
+.img-frame{
+position: relative;
+width: 70%;
+height: 300px;
+overflow: hidden;
+margin: 10px auto;
+}
+.img-01, .img-02, .img-03{
+position: absolute;
+justify-content: center;
+width: 100%;
+height: 100%;
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+.img-01{
+background-image: url('./img/hero1.jpeg');
+animation: slide-animation-01 24s infinite;
+}
+.img-02{
+background-image: url('./img/hero2.jpeg');
+animation: slide-animation-02 24s infinite;
+}
+.img-03{
+background-image: url('./img/hero3.jpeg');
+animation: slide-animation-03 24s infinite;
+}
+
+.msg-01 {
+	text-align:center;
+	font-size: 40px;
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50% , -50%);
+	text-shadow: 2px 2px 3px #000, -1px -1px 3px #000;
+	z-index:1;
+}
+
+@keyframes slide-animation-01 {
+0% {opacity: 1; transform: scale(1.0);}
+30% {opacity: 1;}
+40% {opacity: 0; transform: scale(1.15);}
+90% {opacity: 0}
+100% {opacity: 1; transform: scale(1.0);}
+}
+@keyframes slide-animation-02 {
+0% {opacity: 0;}
+30% {opacity: 0; transform: scale(1.1);}
+40% {opacity: 1;}
+60% {opacity: 1;}
+70% {opacity: 0; transform: scale(1.0);}
+100% {opacity: 0;}
+}
+@keyframes slide-animation-03 {
+0% {opacity: 0;}
+60% {opacity: 0;  transform: scale(1.0);}
+70% {opacity: 1;}
+90% {opacity: 1;}
+100% {opacity: 0; transform: scale(1.1);}
+}
+
+/* スライドショーここまで */
+
+
+/* 検索 */
+.kensaku {
+  width: 40%;
+  height: 60px;
+  line-height: 60px;
+  font-size: 16px;
+  text-align: center;
+  color: #000;
+  border-bottom: 2px solid #5ab4bd;
+  background-color:white;
+  display: block;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+.search {
+  display: flex;
+  width: 80%;
+  margin: 15px 5px 0 30px;
+}
+
+.search input[type=text] {
+  width: 80%;
+  height: 35px;
+  font-size: 15px;
+  padding: 0 6px;
+  color: #474747;
+  border: 2px solid #474747;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.search button[type=submit] {
+  height: 35px;
+  padding: 10px 18px;
+  font-size: 15px;
+  color: #FFF;
+  background: #5ab4bd;
+  border: 2px solid #5ab4bd;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+
+
+}
+
+
+/* colors */
+.royalblue input[type=text] {
+  border-color: #5ab4bd;
+}
+
+.select {
+  border-color: #5ab4bd;
+  border: 2px solid #5ab4bd;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.royalblue button[type=submit] {
+  border-color: #5ab4bd;
+  background: #5ab4bd;
+  background-image: url(./img/search.png);
+  background-repeat: no-repeat;
+}
+
+
+/*タブのスタイル*/
+.sumaho {
+	display: none;
+}
+
+.tab01 {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tab_menu {
+  width: calc(60%/4);
+  height: 60px;
+  line-height: 60px;
+  font-size: 16px;
+  text-align: center;
+  color: #000;
+  border-bottom: 2px solid #5ab4bd;
+  background-color:rgb(193, 223, 219);
+  display: block;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+.tab_menu:hover {
+  opacity: 0.75;
+}
+/*ラジオボタンを全て消す*/
+input[name="tab_menu"] {
+  display: none;
+}
+/*タブ切り替えの中身のスタイル*/
+.tab_contents {
+  display: none;
+  padding: 20px;
+  clear: both;
+  overflow: hidden;
+  transition: .5s opacity;
+  box-shadow: 0 0 3px rgba(0,0,0,.2);
+}
+/*選択されているタブを表示*/
+#menu01:checked ~ #menu01,
+#menu02:checked ~ #menu02,
+#menu03:checked ~ #menu03,
+#menu04:checked ~ #menu04 {
+  display: block;
+}
+/*選択されているタブのスタイル*/
+.tab01 input:checked + .tab_menu {
+  background-color: #5ab4bd;
+  color: #fff;
+}
+
+/* タブ切り替え全体のスタイルここまで */
+
+/* 商品文字のcss */
+
+.item_size {
+	font-size :19px;
+}
+
+
+
+/* 共通フッター */
+.wrapper{
+    min-height: 100vh;
+    position: relative;/*←相対位置*/
+    box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
+}
+
+footer{
+    width: 100%;
+    background-color: #89c7de;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+    position: absolute;/*←絶対位置*/
+    bottom: 0; /*下に固定*/
+    margin-bottom:-100px;
+    font-weight:bold;
+
+}
+
+.itemfooter footer{
+	margin-bottom:-150px;
+}
+
+.footer{
+	font-size: 15px;
+}
+
+
+.card-img-top{
+	height:170px;
+}
+
+/* 上に戻るボタン */
+.pagetop {
+	color: #fff;
+	background-color: #5ab4bd;
+	text-decoration: none;
+	display: none;
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	font-size: 1.5rem;
+	width: 3.3rem;
+	height: 3.3rem;
+	line-height: 3.3rem;
+	border-radius: 3.3rem;
+	text-align: center;
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+.pagetop:hover {
+	color: #fff !important;
+	background-color: #5ab4bd;
+	text-decoration: none;
+	opacity: 1;
+}
+
+/* 上に戻るボタンここまで */
+
+
+
+
+
+
+/* レスポンシブデザイン */
+/* タブレット用 */
+@media screen and (max-width: 1000px) {
+	
+		/* ハンバーガーメニューのデザイン*/
+.drawer-content {
+  width: 50%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: -100%;/* メニューを画面の外に飛ばす */
+  z-index: 99;
+  background: #fff;
+  transition: 0.5s;
+  padding: 0px;
+  padding-top: 50px;
+}
+
+
+/* ヘッダー関連 */
+header {
+	padding: 10px 10px;
+	height:3.2rem;
+}
+
+.header-right {
+	font-size: 10px;
+	top: 30px;
+	margin-top:-23px;
+}
+
+
+.gest {
+	font-size: 10px;
+	top: 15px;
+	padding-bottom: 5px;
+}
+.gest a{
+	font-size: 10px;
+}
+
+/* headerのタブのスタイル */
+.tab01 {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.tab_menu {
+	width: calc(100%/4);
+	
+}
+
+/* heroスライドショー */
+.img-frame{
+	width:100%;
+}
+
+/* 検索 */
+.kensaku {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  text-align: center;
+  color: 5ab4bd;
+  display: block;
+  float: center;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  padding: 0;
+  border-bottom:none;
+}
+.search {
+  display: flex;
+  width: 95%;
+  margin: 5px 5px;
+}
+
+.search input[type=text] {
+  width: 100%;
+  height: 35px;
+  font-size: 15px;
+  padding: 0 6px;
+  color: 5ab4bd;
+  border-bottom: 2px solid #5ab4bd;
+  border-radius: 3px 0 0 3px;
+  outline: none;
+}
+
+
+.select {
+  border-color: #5ab4bd;
+  border-radius: 5px;
+  margin-right: 5px;
+  font-size: 10px;
+}
+.itemfooter{
+	margin-bottom:-100px;
+}
+
+/* カテゴリーのcss */
+.sumaho {
+	display: list-item;
+	list-style: none;
+	background-repeat: no-repeat;
+	
+}
+.suma {
+	width: 100%;
+}
+
+
+.tab_contents_sumaho {
+	width: 100%;
+}
+
+
+
+
+
+/* 商品css */
+
+.item_base {
+	display :grid;
+	grid-template-columns: 1fr 1fr;
+	gap:5px;
+}
+
+	
+	
+	
+.item_base1 {
+	display :grid;
+	grid-template-columns: 1fr 1fr;
+	gap:5px;
+}
+	
+	
+	
+}
+
+/* スマホ用 */
+@media screen and (max-width: 540px) {
+	/* ハンバーガーメニューのデザイン*/
+.drawer-content {
+  width: 50%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: -100%;/* メニューを画面の外に飛ばす */
+  z-index: 99;
+  background: #fff;
+  transition: 0.5s;
+  padding: 0px;
+  padding-top: 50px;
+}
+
+
+/* loginのcss */
+.base {
+    width: 80%;
+    margin: 10px auto;
+    padding: 5px;
+    background-color: rgb(247, 247, 247);
+    border-radius: 20%;
+  }
+
+.base h3 {
+	  display: inline;
+	  padding: 0 10px;
+  }
+/* ヘッダー関連 */
+header {
+	padding: 10px 10px;
+	height:3.2rem;
+}
+
+.header-right {
+	font-size: 10px;
+	top: 30px;
+	margin-top:-23px;
+}
+
+
+.gest {
+	font-size: 10px;
+	top: 15px;
+	padding-bottom: 5px;
+}
+.gest a{
+	font-size: 10px;
+}
+
+/* headerのタブのスタイル */
+.tab01 {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.tab_menu {
+	width: calc(100%/4);
+	
+}
+
+/* heroスライドショー */
+.img-frame{
+	width:100%;
+}
+
+/* 検索 */
+.kensaku {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  text-align: center;
+  color: 5ab4bd;
+  display: block;
+  float: center;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  padding: 0;
+  border-bottom:none;
+}
+.search {
+  display: flex;
+  width: 95%;
+  margin: 5px 5px;
+}
+
+.search input[type=text] {
+  width: 100%;
+  height: 35px;
+  font-size: 15px;
+  padding: 0 6px;
+  color: 5ab4bd;
+  border-bottom: 2px solid #5ab4bd;
+  border-radius: 3px 0 0 3px;
+  outline: none;
+}
+
+
+.select {
+  border-color: #5ab4bd;
+  border-radius: 5px;
+  margin-right: 5px;
+  font-size: 10px;
+}
+.itemfooter{
+	margin-bottom:-100px;
+}
+
+/* カテゴリーのcss */
+.sumaho {
+	display: list-item;
+	list-style: none;
+	background-repeat: no-repeat;
+	
+}
+.suma {
+	width: 100%;
+}
+
+
+.tab_contents_sumaho {
+	width: 100%;
+}
+
+
+
+
+/* 商品css */
+
+.item_base {
+	display :grid;
+	grid-template-columns: 1fr 1fr;
+	gap:5px;
+}
+
+.item_base1 {
+	display :grid;
+	grid-template-columns: 1fr;
+	gap:5px;
+}
+
+
+}
+
+
+
+
+

@@ -1,0 +1,248 @@
+@charset "UTF-8";
+
+
+
+table{
+	margin:auto;
+	text-align:center;
+	width:100%;
+	border-color:white;;
+	border-width:2px;
+
+
+}
+
+tbody{
+	background-color:white;
+}
+
+.pointb{
+	text-decoration: none;
+	color:green;
+	transition: color 0.3s;
+}
+
+.pointb:hover{
+	color: #fff;
+	background: #008040;
+	transition: color 0.3s;
+
+}
+
+
+
+th{
+	width:30%;
+}
+
+ul {
+	margin:0px;
+}
+
+.txt{
+	width:100%;
+	height:100%;
+}
+
+
+.as .txt td{
+	padding:0;
+}
+
+
+.ji{
+	text-align:right;
+}
+.ad{
+	text-align:center;
+
+
+	margin-top:20px;
+	margin-left:auto;
+	margin-right:auto;
+	max-width:800px;
+}
+.nnv{
+	margin:0px;
+}
+
+ .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #ff80ff;
+}
+
+.nnv .nav-pills .nav-link.active, .nav-pills .show> .nav-link {
+    color: #fff;
+    background-color: #ff80ff;
+}
+
+.nnv .nav-pills .nav-link {
+    background-color:black ;
+    border: 0;
+    border-radius: 0.25rem;
+    color:white;
+}
+.nnv .nav-pills .nav-link {
+    background: 1 1;
+    border: 0;
+    border-radius: 0.25rem;
+}
+#pills-home{
+	line-height:2rem;
+
+}
+
+
+
+#pills-contact table{
+	line-height:1.8rem;
+	margin-top:4rem;
+	max-width:650px;
+	margin-bottom:3rem;
+	line-height:3rem;
+
+}
+
+#qq input{
+	font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+#qq table{
+	line-height:1.8rem;
+	margin-top:4rem;
+	max-width:650px;
+	margin-bottom:3rem;
+	line-height:3rem;
+
+}
+
+
+
+.ti{
+	line-height:1.8rem;
+	margin-top:4rem;
+
+}
+.ti td{
+	font-size:1.1rem;
+	letter-spacing:3px;
+	line-height:1.1rem;
+}
+
+#pills-profile td{
+	font-size:1.1rem;
+	letter-spacing:3px;
+	line-height:3rem;
+
+
+}
+
+#qq td{
+	font-size:1.1rem;
+	letter-spacing:3px;
+	line-height:3rem;
+
+
+}
+
+
+
+#pills-contact th{
+	vertical-align:middle;
+	width:40%;
+	line-height:2px;
+}
+#pills-contact input{
+	font-size:0.9rem;
+	letter-spacing:2px;
+}
+
+
+/*退会用のチェックボックス*/
+.anchorText {
+  pointer-events: none;
+  /* 無効っぽい見た目にする */
+  background: #eee;
+  border-radius: 3px;
+  position: relative;
+    display: flex;
+  justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    margin-top:1.4rem;
+    max-width: 280px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+    text-decoration:none;
+}
+
+#check-enable:checked ~ .anchorText {
+  pointer-events: auto;
+  /* 有効可されたっぽい見た目にする */
+  background-color:#ff8080;
+    border-radius: 1px;
+    transition: 0.3s;
+    color:white;
+    text-decoration:none;
+
+}
+
+
+
+
+/*tabの形状*/
+.tab{
+  display: flex;
+  flex-wrap: wrap;
+}
+.tab li a{
+  display: block;
+  background:#ddd;
+  margin:0 2px;
+  padding:10px 20px;
+}
+
+.taikai{
+	max-width:90%;
+	text-align:right;
+}
+/*liにactiveクラスがついた時の形状*/
+.tab li.active a{
+  background:#fff;
+}
+
+
+/*エリアの表示非表示と形状*/
+.area {
+  display: none;/*はじめは非表示*/
+  opacity: 0;/*透過0*/
+  background: #fff;
+  padding:50px 20px;
+}
+
+/*areaにis-activeというクラスがついた時の形状*/
+.area.is-active {
+    display: block;/*表示*/
+    animation-name: displayAnime;/*ふわっと表示させるためのアニメーション*/
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes displayAnime{
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and(max-width:767px){
+.nnv button{
+	font-size:1rem;
+}
+
+	}
