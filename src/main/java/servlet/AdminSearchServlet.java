@@ -23,10 +23,6 @@ import model.UserInfoLogic;
 public class AdminSearchServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-    public AdminSearchServlet() {
-        super();
-    }
-
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// itemNumberを受け取る
 		request.setCharacterEncoding("UTF-8");

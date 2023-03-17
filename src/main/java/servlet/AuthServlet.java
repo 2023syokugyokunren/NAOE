@@ -61,10 +61,7 @@ public class AuthServlet extends HttpServlet {
 		if(ua==true) {
 			HttpSession session = request.getSession();
 			session.removeAttribute("user");
-
 			session.setAttribute("user", user);
-
-
 			session.setAttribute("userMsg", "ユーザー情報の変更が完了しました。お買い物をお楽しみください");
 			forwardPath="/NaoeServlet";
 		}

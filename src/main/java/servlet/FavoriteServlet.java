@@ -13,17 +13,12 @@ import model.FavoriteLogic;
 import model.TemporaryItem;
 import model.User;
 
-/**
- * Servlet implementation class FavoriteServlet
- */
 @WebServlet("/FavoriteServlet")
 public class FavoriteServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
-		
 		//フォワード先
 		String redirectPath=null;
 		
@@ -47,13 +42,6 @@ public class FavoriteServlet extends HttpServlet {
 		redirectPath="/NAOE/ItemServlet?itemNumber="+itemInfo.getId();
 		
 		response.sendRedirect(redirectPath);
-		//RequestDispatcher dispatcher = request.getRequestDispatcher("/NaoeServlet");
-		//dispatcher.forward(request, response);
-	}
-
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 	}
 
 }

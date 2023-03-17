@@ -41,7 +41,6 @@ public class LoginServlet extends HttpServlet {
 			
 		}else {
 			//エラーメッセージをリクエストスコープに保存
-			//request.setAttribute("errorMsg", "useridまたはパスワードが間違っています");
 			request.setAttribute("errorMsg", "ユーザーIDまたはパスワードが間違っています");
 			
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/login.jsp");

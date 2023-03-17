@@ -12,7 +12,6 @@ import dao.UpdateItemDAO;
 * UpdateItemメソッド	商品変更時に使用するメソッド(ChangeItemServlet))
 * DeleteItemメソッド	商品削除時に使用するメソッド(DeleteServlet)
 */
-
 public class AdminControlLogic {
 	 /**
 	   * InsertItemメソッド

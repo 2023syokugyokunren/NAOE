@@ -23,8 +23,6 @@ public class purchaseServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		/*RequestDispatcher logdispatcher = request.getRequestDispatcher("/WEB-INF/jsp/cartInfo.jsp");
-		logdispatcher.forward(request, response);*/
 		RequestDispatcher dispatcher=request.getRequestDispatcher("/WEB-INF/jsp/cartInfo.jsp");
 		dispatcher.forward(request,response);
 	}

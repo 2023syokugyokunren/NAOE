@@ -23,8 +23,6 @@ public class ChangeItemServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//action属性からid値から取得
-		//System.out.println(request.getParameter("id"));
 		 int num = Integer.parseInt(request.getParameter("id"));
 		 
 		 //logicを生成しselect文を実行
@@ -60,7 +58,6 @@ public class ChangeItemServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		
 		if (part.getSize() != 0) { 
-			
 			File f = new File(this.getClass()
 					.getClassLoader()
 					.getResource("")
@@ -96,7 +93,6 @@ public class ChangeItemServlet extends HttpServlet {
 			 session.setAttribute("ChangeErorr", "商品内容の変更に失敗しました");
 	    	 // update失敗時
 		}
-
 		response.sendRedirect(request.getContextPath() + "/AdminServlet");	
 	}
 

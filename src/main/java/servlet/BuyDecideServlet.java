@@ -15,15 +15,11 @@ import model.Cart;
 import model.CartControlLogic;
 import model.User;
 
-/**
- * Servlet implementation class TestServlet
- */
 @WebServlet("/BuyDecideServlet")
 public class BuyDecideServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		String forwardPath=null;
 		int confirmToken = 0;
 		request.setCharacterEncoding("UTF-8");

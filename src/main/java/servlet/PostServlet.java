@@ -17,16 +17,12 @@ import model.User;
 @WebServlet("/PostServlet")
 public class PostServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    public PostServlet() {
-        super();
-    }
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int postId = Integer.parseInt(request.getParameter("id"));
 		
 		PostLogic deleteLogic = new PostLogic();
 		boolean result = deleteLogic.DeletePost(postId);
-		System.out.println(result);
 		
 		//保存された商品情報を取得
 		HttpSession session = request.getSession();
@@ -35,7 +31,6 @@ public class PostServlet extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		String redirectpath=null;
 		
 		request.setCharacterEncoding("UTF-8");
@@ -68,5 +63,4 @@ public class PostServlet extends HttpServlet {
 		
 		response.sendRedirect(request.getContextPath() + "/ItemServlet?itemNumber=" + itemInfo.getId());
 	}
-
 }

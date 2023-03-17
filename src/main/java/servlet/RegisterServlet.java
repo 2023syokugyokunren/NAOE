@@ -54,26 +54,11 @@ public class RegisterServlet extends HttpServlet {
 		boolean flag = true;
 		String fowardPath = null;
 		
-//		if(userid.length() > 11 || userid.length() < 3 || userid.matches("[^a-zA-Z]")) {
-//			request.setAttribute("errorMsgId", "ユーザーIDはローマ字のみで、4文字以上10文字以下で入力してください");
-//			flag = false;
-//		}
-//		
-//		if(pass.length() > 11 || userid.length() < 3){ 
-//			request.setAttribute("errorMsgPass", "パスワードは4文字以上11文字以下で入力してください");
-//			flag = false;
-//		}
-//		
-//		if(username.length() > 11 || userid.length() < 3 ){
-//			request.setAttribute("errorMsgName", "お名前は4文字以上10文字以下で入力してください");
-//			flag = false;
-//		}
 		UserAuthLogic userLogic=new UserAuthLogic();
 		if(!userLogic.CheckUser(userid)) {
 			request.setAttribute("errorMsgId", "このユーザーIDはすでに使われています");
 			flag=false;
 		}
-		
 		
 		if (flag == true) {
 			RegisterInfo registerInfo = new RegisterInfo(userid,pass,username,mail);

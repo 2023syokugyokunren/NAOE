@@ -86,7 +86,6 @@ public class ItemServlet extends HttpServlet {
 			request.setAttribute("parsentList", parsentList);
 		}
 		
-		
 		//フォワード
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/ItemDetail.jsp");
 		dispatcher.forward(request, response);
@@ -144,9 +143,6 @@ public class ItemServlet extends HttpServlet {
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/NaoeServlet");
 			dispatcher.forward(request, response);
 		}
-
-
-
 	}
 
 }

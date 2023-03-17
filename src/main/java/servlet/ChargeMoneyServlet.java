@@ -11,24 +11,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import model.UserInfoLogic;
 
-/**
- * Servlet implementation class ChargeMoneyServlet
- */
 @WebServlet("/ChargeMoneyServlet")
 public class ChargeMoneyServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public ChargeMoneyServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//フォワード先
@@ -39,16 +25,10 @@ public class ChargeMoneyServlet extends HttpServlet {
 				dispatcher.forward(request, response);
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//フォワード先
 		String forwardPath=null;
 		request.setCharacterEncoding("UTF-8");
-
-		//HttpSession session = request.getSession();
-		//User user = (User) session.getAttribute("user");
 
 		int money=Integer.parseInt(request.getParameter("money"));
 		int id=Integer.parseInt(request.getParameter("id"));
@@ -59,7 +39,6 @@ public class ChargeMoneyServlet extends HttpServlet {
 		if(judge==true) {
 			request.setAttribute("money", money);
 			forwardPath = "/WEB-INF/jsp/chargeMoneyOK.jsp";
-			System.out.println("チャージ成功");
 
 		}else {
 			System.out.println("チャージ失敗");

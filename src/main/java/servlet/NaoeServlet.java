@@ -17,7 +17,6 @@ import model.FavoriteLogic;
 import model.TemporaryItem;
 import model.User;
 
-
 @WebServlet("/NaoeServlet")
 public class NaoeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -116,11 +115,10 @@ public class NaoeServlet extends HttpServlet {
 		//お気に入り
 		User user = (User) session.getAttribute("user");
 		if(user!=null) {
-		FavoriteLogic favoriteItem=new FavoriteLogic();
-		List<TemporaryItem> favoriteList = favoriteItem.SelectFavorite(user.getId());
-		request.setAttribute("favoriteList", favoriteList);
+			FavoriteLogic favoriteItem=new FavoriteLogic();
+			List<TemporaryItem> favoriteList = favoriteItem.SelectFavorite(user.getId());
+			request.setAttribute("favoriteList", favoriteList);
 		}
-		
 		
 		// ランキングTOP５
 		List<TemporaryItem> itemList = selectLogic.CreateItemListLimit(0, 5);
@@ -129,7 +127,6 @@ public class NaoeServlet extends HttpServlet {
 		List<Category> category = selectLogic.DisplayCategory();
 		session.setAttribute("category", category);
 
-		
 		// ここからカテゴリごとの売り上げランキング
 		// 野菜・果物
 		List<TemporaryItem> categoryList_yasa = selectLogic.selectCategoryRank(9, 0, 5);
@@ -205,11 +202,4 @@ public class NaoeServlet extends HttpServlet {
 		RequestDispatcher logdispatcher = request.getRequestDispatcher("/WEB-INF/jsp/shop.jsp");
 		logdispatcher.forward(request, response);
 	}
-
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
-
 }

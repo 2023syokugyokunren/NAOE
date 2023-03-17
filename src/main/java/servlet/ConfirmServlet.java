@@ -23,9 +23,7 @@ public class ConfirmServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//フォワード先
 		String forwardPath = null;
-
 		//サーブレットクラスの動作を決定する「action」の値をリクエストパラメータから取得
 		String action=request.getParameter("action");
 
@@ -89,7 +87,7 @@ public class ConfirmServlet extends HttpServlet {
 	    HttpSession session = request.getSession();
 	    session.setAttribute("items",items );
 	    
-	 // フォワード
+	    // フォワード
 	    RequestDispatcher dispatcher =
 	        request.getRequestDispatcher
 	            ("/WEB-INF/jsp/addConfirm.jsp");

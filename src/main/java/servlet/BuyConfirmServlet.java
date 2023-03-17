@@ -17,24 +17,10 @@ import model.User;
 import model.UserAuthLogic;
 import model.UserInfoLogic;
 
-/**
- * Servlet implementation class BuyConfirmServlet
- */
 @WebServlet("/BuyConfirmServlet")
 public class BuyConfirmServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public BuyConfirmServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
@@ -79,13 +65,4 @@ public class BuyConfirmServlet extends HttpServlet {
 			dispatcher.forward(request, response);
 		}
 	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpSsrvletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
-
 }
