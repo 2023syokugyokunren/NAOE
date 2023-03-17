@@ -56,7 +56,7 @@
 
 ![home](https://user-images.githubusercontent.com/117996152/225810686-5d75cf7c-4826-470d-b7e8-ccc79302b36f.png)
 
-### 1、商品画面
+### ２，商品画面
 
 ![item](https://user-images.githubusercontent.com/117996152/225812026-1958f63f-6b3c-4f18-832c-c4d3856b92ff.png)
 
