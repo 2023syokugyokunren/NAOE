@@ -9,6 +9,7 @@
 <b><a><a href=""><img src="https://avatars.githubusercontent.com/u/125331210?v=4" width="70px;" alt="三品睦" style="border-radius: 50%;" /></a></b>
 <b><a><a href=""><img src="https://avatars.githubusercontent.com/u/125333819?v=4" width="70px;" alt="東山峻也" style="border-radius: 50%;" /></a></b>
 <b><a><a href=""><img src="https://avatars.githubusercontent.com/u/125334172?v=4" width="70px;" alt="日比野昂輝" style="border-radius: 50%;" /></a></b>
+<b><a><a href=""><img src="https://avatars.githubusercontent.com/u/117996152?v=4" width="70px;" alt="原田征岳" style="border-radius: 50%;" /></a></b>
   </p>
 # NAOE
 職業訓練卒業制作
