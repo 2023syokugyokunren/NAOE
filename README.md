@@ -25,7 +25,7 @@
 <b><a><a href="https://github.com/tamako1025h"><img src="https://avatars.githubusercontent.com/u/117996152?v=4" width="70px;" alt="原田征岳" style="border-radius: 50%;" /></a></b>
   </td>
         <td>
-<b><a><img src="https://i.pinimg.com/736x/3e/0c/33/3e0c330c2beacca1b66db52171864170.jpg" width="70px;" alt="足立早花" style="border-radius: 50%;" /></a></b>
+<b><img src="https://i.pinimg.com/736x/3e/0c/33/3e0c330c2beacca1b66db52171864170.jpg" width="70px;" alt="足立早花" style="border-radius: 50%;" /></b>
     </td>
   </tr>
   <tr>
