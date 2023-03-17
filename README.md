@@ -49,6 +49,16 @@
 - CSS
 - JavaScript
 - Eclipse2022
+- 
+## :green_book: 動作環境
+
+データベースに関しては、phpMyAdmin内部の「MySQL」を呼び出して動作しています。
+- naoeshopをインポートする。
+
+- ターゲットランタイム: Tomcat9(Java17)<br>
+- 動的webモジュールバージョン: 4.0<br>
+- http://localhost:8080でアクセスできることを確認する。
+    - NaoeServletを起動して、ホーム画面がでてきたら成功
 
 ## :green_book: ホームページ概要（一部）
 
@@ -73,15 +83,4 @@
 ### ５、ユーザー情報画面（住所登録・ポイントチャージ、パスワード変更、退会が可能）
 
 ![user](https://user-images.githubusercontent.com/117996152/225817602-5846a6a7-cce7-491b-8cc3-164daeef1037.png)
-
-## :green_book: 動作環境
-
-データベースに関しては、phpMyAdmin内部の「MySQL」を呼び出して動作しています。
-
-- ターゲットランタイム: Tomcat9(Java17)<br>
-- 動的webモジュールバージョン: 4.0<br>
-- http://localhost:8080でアクセスできることを確認する。
-    - NaoeServletを起動して、ホーム画面がでてきたら成功
-
-
 
