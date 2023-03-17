@@ -13,11 +13,11 @@
 </p>
 <ul>
   <li>
-    <img src="https://avatars.githubusercontent.com/u/99730698?v=4">
-    作業風景1
+    <img src="https://avatars.githubusercontent.com/u/99730698?v=4" width="70px;">
+    伊藤伸弘
   </li>
   <li>
-    <img src="https://avatars.githubusercontent.com/u/124061340?v=4" alt="作業風景2">
-    作業風景2
+    <img src="https://avatars.githubusercontent.com/u/124061340?v=4" width="70px;">
+    堀汐里
   </li>
 </ul>
