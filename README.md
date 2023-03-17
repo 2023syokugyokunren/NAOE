@@ -57,8 +57,7 @@
 
 - ターゲットランタイム: Tomcat9(Java17)<br>
 - 動的webモジュールバージョン: 4.0<br>
-- http://localhost:8080でアクセスできることを確認する。
-    - NaoeServletを起動して、ホーム画面がでてきたら成功
+- localhost:8080/NAOE/NaoeServlet でアクセスできることを確認する。
 
 ## :green_book: ホームページ概要（一部）
 
