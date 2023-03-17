@@ -50,7 +50,7 @@
 - JavaScript
 - Eclipse
 
-## :green_book: ホームページ概要
+## :green_book: ホームページ概要（一部）
 
 ### 1、ホーム画面
 
