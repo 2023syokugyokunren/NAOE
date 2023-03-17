@@ -70,12 +70,19 @@ public class ConfirmServlet extends HttpServlet {
 	    String discription=request.getParameter("discription");
 	    
 		Part part=request.getPart("image");
-		//ファイル名を取得
-		//String filename=part.getSubmittedFileName();//ie対応が不要な場合
+		
+		File f = new File(this.getClass()
+				.getClassLoader()
+				.getResource("")
+				.getPath());
+
+		String classPath = f.getAbsolutePath();
+		String contextPath = classPath.substring(0, classPath.lastIndexOf("\\.metadata"));
+        System.out.println(contextPath);
+		
 		String filename=part.getSubmittedFileName();
-		// 環境が変わっても変化するようにしたいが、できなかった
-		// いい案があれば教えて
-		String path="C:\\work3\\NAOE\\src\\main\\webapp\\image";
+		
+		String path = contextPath+"\\NAOE\\src\\main\\webapp\\image";
 		//実際にファイルが保存されるパス確認
 		System.out.println(path);
 		//書き込み

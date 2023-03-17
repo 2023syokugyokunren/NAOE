@@ -60,10 +60,19 @@ public class ChangeItemServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		
 		if (part.getSize() != 0) { 
+			
+			File f = new File(this.getClass()
+					.getClassLoader()
+					.getResource("")
+					.getPath());
+
+			String classPath = f.getAbsolutePath();
+			String contextPath = classPath.substring(0, classPath.lastIndexOf("\\.metadata"));
+	        System.out.println(contextPath);
+	        
 			filename=part.getSubmittedFileName();
-			// 環境が変わっても変化するようにしたいが、できなかった
-			// いい案があれば教えて
-			String path="C:\\work3\\NAOE\\src\\main\\webapp\\image";
+			
+			String path = contextPath + "\\NAOE\\src\\main\\webapp\\image";
 			part.write(path+File.separator+filename);
 			
 		} else {
