@@ -4,6 +4,8 @@
 
 <p align="center"><br>
 <b><a>- Contributors -</a></b><br><br>
+
+<b><a><a href=""><img src="https://avatars.githubusercontent.com/u/99730698?v=4" width="70px;" style="border-radius: 50%;" /></a></b>
 # NAOE
 職業訓練卒業制作
 確認名前
