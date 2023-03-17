@@ -28,52 +28,42 @@ public class AdminServlet extends HttpServlet {
 		List<TemporaryItem> tempoList = admin.DisplayAllItem();
 		request.setAttribute("tempoList", tempoList);
 		
-	
 		List<TemporaryItem> rankingList = admin.DisplayItemOrderRanking();
 		request.setAttribute("rankingList", rankingList);
 		
 		//値段昇順(小さい順)
-	
 		List<TemporaryItem> priceList = admin.SearcAdmin("PRICE","ASC");
 		request.setAttribute("priceList", priceList);
 		
 		//値段降順(大きい順)
-
 		List<TemporaryItem> priceDescList = admin.SearcAdmin("PRICE","DESC");
 		request.setAttribute("priceDescList", priceDescList);
 				
 		//カテゴリー昇順(小さい順)
-
 		List<TemporaryItem> categoryList = admin.SearcAdmin("CATEGORY","ASC");
 		request.setAttribute("categoryList", categoryList);
 		
 		//カテゴリー降順(大きい順)
-	
 		List<TemporaryItem> categoryDescList = admin.SearcAdmin("CATEGORY","DESC");
 		request.setAttribute("categoryDescList", categoryDescList);
 		
 		//在庫昇順(小さい順)
-		
 		List<TemporaryItem> stockList = admin.SearcAdmin("STOCK","ASC");
 		request.setAttribute("stockList", stockList);
 		
 		//在庫降順(大きい順)
-		
 		List<TemporaryItem> stockDescList = admin.SearcAdmin("STOCK","DESC");
 		request.setAttribute("stockDescList", stockDescList);
 		
 		//登録ID降順(新しい順)
-	
 		List<TemporaryItem> itemDescList = admin.SearcAdmin("ITEM_ID","DESC");
 		request.setAttribute("itemDescList", itemDescList);
 		
 		//売上昇順(小さい順)
-	
 		List<TemporaryItem> salesList = admin.SearcAdmin("SALES","ASC");
 		request.setAttribute("salesList", salesList);
 		
 		//売上降順(大きい順)
-	
 		List<TemporaryItem> salesDescList = admin.SearcAdmin("SALES","DESC");
 		request.setAttribute("salesDescList", salesDescList);
 		
@@ -89,7 +79,6 @@ public class AdminServlet extends HttpServlet {
 			forwardPath = "/WEB-INF/jsp/admin.jsp";
 
 		} else if (action.equals("add")) {
-			//optionの
 			DisplayItemLogic logic = new DisplayItemLogic();
 			List<Category> category =logic.DisplayCategory();
 			HttpSession session = request.getSession();//セッションスコープ取得

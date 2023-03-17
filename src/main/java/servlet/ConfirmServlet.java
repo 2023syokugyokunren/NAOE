@@ -25,10 +25,10 @@ public class ConfirmServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//フォワード先
 		String forwardPath = null;
-		
+
 		//サーブレットクラスの動作を決定する「action」の値をリクエストパラメータから取得
 		String action=request.getParameter("action");
-		
+
 		//管理画面へフォワード
 		if (action == null) {
 			// フォワード先を設定
@@ -39,27 +39,24 @@ public class ConfirmServlet extends HttpServlet {
 			HttpSession session = request.getSession();
 			TemporaryItem items = (TemporaryItem) session.getAttribute("items");
 			User user = (User) session.getAttribute("user");
-			
+
 			//logic処理
 			AdminControlLogic insertLogic = new AdminControlLogic();
 			boolean tf = insertLogic.InsertItem(items,user);
-			
+
 			if(tf==true) {
-			// 不要となったセッションスコープ内のインスタンスを削除
-			session.setAttribute("successAdd", "商品を追加しました");
-			
-	    } else if(tf==false) {
-	    	 
-	    	 session.setAttribute("erorrAdd", "商品追加に失敗しました");
-	    }
-			
+				// 不要となったセッションスコープ内のインスタンスを削除
+				session.setAttribute("successAdd", "商品を追加しました");
+
+			} else if(tf==false) {
+
+				session.setAttribute("erorrAdd", "商品追加に失敗しました");
+			}
+
 		}
 		response.sendRedirect(request.getContextPath() + "/AdminServlet");
 	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 	    request.setCharacterEncoding("UTF-8");
@@ -83,12 +80,9 @@ public class ConfirmServlet extends HttpServlet {
 		String filename=part.getSubmittedFileName();
 		
 		String path = contextPath+"\\NAOE\\src\\main\\webapp\\image";
-		//実際にファイルが保存されるパス確認
-		System.out.println(path);
 		//書き込み
 		part.write(path+File.separator+filename);
 		// +File.separator+filename
-	    
 	    TemporaryItem items=new TemporaryItem(item,category,discription,filename,price,stock);
 	    
 	    //セッションスコープに保存
