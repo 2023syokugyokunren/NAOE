@@ -52,8 +52,8 @@
 - 
 ## :green_book: 動作環境
 
-データベースに関しては、phpMyAdmin内部の「MySQL」を呼び出して動作しています。
-- naoeshopをインポートする。
+- データベースに関しては、phpMyAdmin内部の「MySQL」を呼び出して動作しています。
+    - naoeshopをインポートする。
 
 - ターゲットランタイム: Tomcat9(Java17)<br>
 - 動的webモジュールバージョン: 4.0<br>
