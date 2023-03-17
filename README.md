@@ -53,7 +53,7 @@
 ## :green_book: ホームページ概要
 
 ### 1、ホーム画面
-![home](https://user-images.githubusercontent.com/117996152/225809946-b05b3df2-6097-4b10-a845-72f6eb30a871.png)
 
-![home1](https://user-images.githubusercontent.com/117996152/225810302-b96f19f6-c84d-452e-898f-c4f8f910c1ff.png)
+![home](https://user-images.githubusercontent.com/117996152/225810686-5d75cf7c-4826-470d-b7e8-ccc79302b36f.png)
+
 
