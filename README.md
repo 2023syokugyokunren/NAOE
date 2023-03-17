@@ -2,6 +2,8 @@
 
 <h2 align="center">Python+Webプログラミング実践科 チームNAOE卒業制作</h2>
 
+<p align="center"><br>
+<b><a>- Contributors -</a></b><br><br>
 # NAOE
 職業訓練卒業制作
 確認名前
