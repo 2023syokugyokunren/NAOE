@@ -60,4 +60,8 @@
 
 ![item](https://user-images.githubusercontent.com/117996152/225812026-1958f63f-6b3c-4f18-832c-c4d3856b92ff.png)
 
+### ３，カート画面・購入確認画面
+
+![cart](https://user-images.githubusercontent.com/117996152/225812877-a6ea1c17-9be6-4515-89ec-85d423ed1b7d.png)
+
 
