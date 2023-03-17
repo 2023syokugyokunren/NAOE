@@ -49,7 +49,7 @@
 - CSS
 - JavaScript
 - Eclipse2022
-- 
+
 ## :green_book: 動作環境
 
 - データベースに関しては、phpMyAdmin内部の「MySQL」を呼び出して動作しています。
