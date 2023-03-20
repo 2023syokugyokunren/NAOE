@@ -56,6 +56,7 @@ public class ChangeItemServlet extends HttpServlet {
 		String filename = null;
 		
 		HttpSession session = request.getSession();
+		TemporaryItem item = (TemporaryItem) session.getAttribute("iinfo");
 		
 		if (part.getSize() != 0) { 
 			File f = new File(this.getClass()
@@ -65,15 +66,18 @@ public class ChangeItemServlet extends HttpServlet {
 
 			String classPath = f.getAbsolutePath();
 			String contextPath = classPath.substring(0, classPath.lastIndexOf("\\.metadata"));
-	        System.out.println(contextPath);
-	        
+			
 			filename=part.getSubmittedFileName();
 			
 			String path = contextPath + "\\NAOE\\src\\main\\webapp\\image";
+			
+			// 新しい画像を保存して既存の画像を破棄する
 			part.write(path+File.separator+filename);
 			
+			File file = new File(path+File.separator+item.getImage());
+			file.delete();
+			
 		} else {
-			TemporaryItem item = (TemporaryItem) session.getAttribute("iinfo");
 			filename = item.getImage();
 		}
 		

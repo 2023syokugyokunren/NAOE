@@ -73,7 +73,6 @@ public class ConfirmServlet extends HttpServlet {
 
 		String classPath = f.getAbsolutePath();
 		String contextPath = classPath.substring(0, classPath.lastIndexOf("\\.metadata"));
-        System.out.println(contextPath);
 		
 		String filename=part.getSubmittedFileName();
 		
