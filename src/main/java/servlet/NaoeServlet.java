@@ -22,7 +22,7 @@ public class NaoeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		//NAOE制作
 		HttpSession session = request.getSession();
 
 		DisplayItemLogic selectLogic = new DisplayItemLogic();
